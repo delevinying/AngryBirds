@@ -49,6 +49,9 @@
      <Compile Include="Assets\scripts\Bird.cs" />
      <Compile Include="Assets\scripts\Slingshot.cs" />
      <Compile Include="Assets\scripts\State\GameState.cs" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>F:/ut/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>F:/ut/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -63,6 +66,9 @@
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>F:/ut/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Purchasing">
+ <HintPath>F:/ut/Editor/Data/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>F:/ut/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>

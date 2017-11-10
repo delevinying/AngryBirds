@@ -66,6 +66,8 @@ public class Slingshot : MonoBehaviour {
                     //get the point on screen user has tapped
                     Vector3 location = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     //if user has tapped onto the bird
+				Debug.Log("  CircleCollider2D          "+BirdToThrow.GetComponent<CircleCollider2D>());
+				Debug.Log(location+"  location          "+Physics2D.OverlapPoint(location));
                     if (BirdToThrow.GetComponent<CircleCollider2D>() == Physics2D.OverlapPoint(location))
                     {
                         slingshotState = GameState.SlingshotState.UserPulling;
