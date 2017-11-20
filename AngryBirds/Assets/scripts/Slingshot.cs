@@ -100,7 +100,11 @@ public class Slingshot : MonoBehaviour {
                 }
                 else//user has removed the tap 
                 {
-                    SetTrajectoryLineRenderesActive(false);
+
+				//隐藏
+//                    SetTrajectoryLineRenderesActive(false);
+
+
                     //TrajectoryLineRenderer.isVisible = false;
 
 
