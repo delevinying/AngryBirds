@@ -58,6 +58,9 @@
 -r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAR/RuntimeEditor/UnityEngine.AR.dll'
 -r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll'
 -r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll'
+-r:'/Users/delevinying/Library/Unity/cache/packages/packages.unity.com/com.unity.ads@0.0.16/UnityEngine.Advertisements.dll'
+-r:'/Users/delevinying/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@0.0.17/UnityEngine.Analytics.dll'
+-r:'/Users/delevinying/Library/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.18/UnityEngine.Purchasing.dll'
 -r:'/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll'
 -r:'/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll'
 -define:UNITY_5_3_OR_NEWER
@@ -153,6 +156,7 @@
 'Assets/scripts/Bird.cs'
 'Assets/scripts/Slingshot.cs'
 'Assets/scripts/State/GameState.cs'
+'Assets/scripts/utils/log/TraceLog.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Xml.Linq.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/UnityScript.dll'

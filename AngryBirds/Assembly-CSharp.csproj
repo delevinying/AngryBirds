@@ -54,6 +54,7 @@
      <Compile Include="Assets\scripts\Bird.cs" />
      <Compile Include="Assets\scripts\Slingshot.cs" />
      <Compile Include="Assets\scripts\State\GameState.cs" />
+     <Compile Include="Assets\scripts\utils\log\TraceLog.cs" />
  <Reference Include="UnityEngine.CoreModule">
  <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
  </Reference>
