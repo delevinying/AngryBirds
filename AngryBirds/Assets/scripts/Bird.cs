@@ -55,14 +55,15 @@ public class Bird : MonoBehaviour {
 
 	private void reSetBullet(){
 		//initBullet ();
-		//slingshotState = GameState.SlingshotState.ReSet;
+//		slingshotState = GameState.SlingshotState.ReSet;
+//		this.gameObject.transform.position = new Vector3(0,0,0);
+		Destroy(this.gameObject);
 	}
 
 	IEnumerator ReSetGame(float seconds){
 		yield return new WaitForSeconds (seconds);
 		TraceLog.traceLog (className, "ReSetGame", "okoko");
-		//reSetBullet ();
-
+		reSetBullet ();
 	}
 
 }

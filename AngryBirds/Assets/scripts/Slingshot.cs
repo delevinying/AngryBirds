@@ -56,6 +56,16 @@ public class Slingshot : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		runState();
+		checkBulletState ();
+	}
+
+	private void checkBulletState(){
+		if (BirdToThrow == null) {
+			TraceLog.traceLog ("Slingshot", "checkBulletState", "gameObject  null");
+			//BirdToThrow = 
+		}else{
+			TraceLog.traceLog ("Slingshot", "checkBulletState", "gameObject  ok");
+		}
 	}
 
 	private void runState() {
