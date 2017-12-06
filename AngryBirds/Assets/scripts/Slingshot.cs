@@ -24,6 +24,7 @@ public class Slingshot : MonoBehaviour {
 
 	//丢出去的石头
 	public GameObject BirdToThrow;
+//	public GameObject bullets2;
 
 	//起始的石头所在坐标
 	public Transform BirdWaitPosition;
@@ -60,11 +61,13 @@ public class Slingshot : MonoBehaviour {
 	}
 
 	private void checkBulletState(){
-		if (BirdToThrow == null) {
+		if (BirdToThrow.gameObject.active == false) {
 			TraceLog.traceLog ("Slingshot", "checkBulletState", "gameObject  null");
-			//BirdToThrow = 
+			this.BirdToThrow.gameObject.SetActive(true);
+			BirdToThrow.GetComponent<Bird> ().reSetFg (); 
+			slingshotState = GameState.SlingshotState.Idle;
 		}else{
-			TraceLog.traceLog ("Slingshot", "checkBulletState", "gameObject  ok");
+			//TraceLog.traceLog ("Slingshot", "checkBulletState", "gameObject  ok");
 		}
 	}
 

@@ -7,6 +7,7 @@ public class Bird : MonoBehaviour {
 	GameState.BirdState state;
 	//GameState.SlingshotState slingshotState;
 	private string className = "Bird";
+	public bool fg = false;
 
 	// Use this for initialization
 	void Start () {
@@ -24,7 +25,7 @@ public class Bird : MonoBehaviour {
 
 	void FixedUpdate(){
 		//丢出后，速度降了,我们需要将它静止,这时候设计阻力
-		if ( state == GameState.BirdState.Thrown
+		if ( state == GameState.BirdState.Thrown && fg == false
 			&& GetComponent<Rigidbody2D> ().velocity.sqrMagnitude <= 1) {
 			this.gameObject.GetComponent<Rigidbody2D> ().drag = 0.5f;
 			StartCoroutine (ReSetGame(1));
@@ -54,16 +55,19 @@ public class Bird : MonoBehaviour {
 	}
 
 	private void reSetBullet(){
-		//initBullet ();
-//		slingshotState = GameState.SlingshotState.ReSet;
-//		this.gameObject.transform.position = new Vector3(0,0,0);
-		Destroy(this.gameObject);
+		this.gameObject.active = false;
+		this.StopAllCoroutines ();
+		fg = true;
+	}
+
+	public void reSetFg(){
+		fg = false;
 	}
 
 	IEnumerator ReSetGame(float seconds){
 		yield return new WaitForSeconds (seconds);
 		TraceLog.traceLog (className, "ReSetGame", "okoko");
-		reSetBullet ();
+		//reSetBullet ();
 	}
 
 }
