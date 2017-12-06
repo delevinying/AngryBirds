@@ -17,7 +17,7 @@ public class GameState{
         Lost
     }
 
-    public enum BirdState
+    public enum BulletState
     {
 		Idle,
         BeforeThrown,

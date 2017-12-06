@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bird : MonoBehaviour {
 
-	GameState.BirdState state;
+	GameState.BulletState state;
 	//GameState.SlingshotState slingshotState;
 	private string className = "Bird";
 	public bool fg = false;
@@ -19,13 +19,13 @@ public class Bird : MonoBehaviour {
 		GetComponent<TrailRenderer>().sortingLayerName = "Foreground";
 		GetComponent<Rigidbody2D>().isKinematic = true;
 		GetComponent<CircleCollider2D>().radius = 0.6f;
-		state = GameState.BirdState.BeforeThrown;
+		state = GameState.BulletState.BeforeThrown;
 		this.gameObject.GetComponent<Rigidbody2D> ().drag = 0f;
 	}
 
 	void FixedUpdate(){
 		//丢出后，速度降了,我们需要将它静止,这时候设计阻力
-		if ( state == GameState.BirdState.Thrown && fg == false
+		if ( state == GameState.BulletState.Thrown && fg == false
 			&& GetComponent<Rigidbody2D> ().velocity.sqrMagnitude <= 1) {
 			this.gameObject.GetComponent<Rigidbody2D> ().drag = 0.5f;
 			StartCoroutine (ReSetGame(1));
@@ -51,7 +51,7 @@ public class Bird : MonoBehaviour {
 		GetComponent<TrailRenderer> ().enabled = true;
 		GetComponent<Rigidbody2D> ().isKinematic = false;
 		GetComponent<CircleCollider2D> ().radius = 0.6f;
-		state = GameState.BirdState.Thrown;
+		state = GameState.BulletState.Thrown;
 	}
 
 	private void reSetBullet(){
