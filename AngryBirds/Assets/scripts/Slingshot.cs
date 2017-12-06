@@ -89,9 +89,9 @@ public class Slingshot : MonoBehaviour {
 				}
 			}
 			break;
-		case GameState.SlingshotState.ReSet://起始，默认状态
-			TraceLog.traceLog("Sling","Update","ReSet");
-			break;
+//		case GameState.SlingshotState.ReSet://起始，默认状态
+//			TraceLog.traceLog("Sling","Update","ReSet");
+//			break;
 		case GameState.SlingshotState.UserPulling:
 			DisplaySlingshotLineRenderers();//展示绘制弹弓的线条
 			if (Input.GetMouseButton(0))//移动中的点击，未释放

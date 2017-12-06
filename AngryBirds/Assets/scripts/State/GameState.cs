@@ -6,8 +6,7 @@ public class GameState{
     public enum SlingshotState {
            Idle,
            UserPulling,
-           BirdFlying,
-			ReSet
+           BirdFlying
     }
 
     public enum GamingState {
@@ -20,6 +19,7 @@ public class GameState{
 
     public enum BirdState
     {
+		Idle,
         BeforeThrown,
         Thrown
     }
