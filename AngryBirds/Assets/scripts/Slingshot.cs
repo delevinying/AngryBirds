@@ -200,7 +200,7 @@ public class Slingshot : MonoBehaviour {
 			segments[i] = segments[0] + segVelocity * time2 + 0.5f * Physics2D.gravity * Mathf.Pow(time2, 2);
 		}
 		//为弹道设置坐标数量，并将他赋予
-		TrajectoryLineRenderer.numPositions = segmentCount;
+		TrajectoryLineRenderer.positionCount = segmentCount;
 		for (int i = 0; i < segmentCount; i++) {
 			TrajectoryLineRenderer.SetPosition (i, segments [i]);
 		}
